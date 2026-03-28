@@ -28,3 +28,18 @@ function hobby_widgets(){
 }
 
 add_action('widgets_init', 'hobby_widgets');
+
+function hobby_post_types(){
+    register_post_type('produkt', array(
+        'labels' => array(
+            'name' => 'Produkter',
+            'add_new_item' => 'Lägg till ny produkt',
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+        'show_in_nav_menus' =>true,
+    ));
+}
+
+add_action('init', 'hobby_post_types');

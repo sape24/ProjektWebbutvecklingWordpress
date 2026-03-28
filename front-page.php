@@ -40,9 +40,6 @@
         if($news->have_posts()) : while($news->have_posts()) : $news->the_post();
         ?>
             <article class="newscard">
-                <?php if(has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail(); ?>
-                <?php endif; ?>
                 <h3><?php the_title(); ?></h3>
                 <?php the_excerpt(); ?>
                 <a href="<?php the_permalink(); ?>">Läs mer</a>
