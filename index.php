@@ -6,7 +6,7 @@
             <?php the_post_thumbnail(); ?>
         <?php endif; ?>
         <h2><?php the_title(); ?></h2>
-        <?php the_content(); ?>
+        <?php the_excerpt(); ?>
         <a href="<?php the_permalink(); ?>">Läs mer</a>
     </article>
 <?php endwhile; endif; ?>
